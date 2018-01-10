@@ -1,0 +1,31 @@
+{
+    "name": "ut-code-sql",
+    "displayName": "ut-code-sql",
+    "description": "TSQL lint",
+    "version": "1.0.0",
+    "publisher": "undertree",
+    "dependencies": {
+        "ut-tsql-lexer": "^1.0.0"
+    },
+    "engines": {
+        "vscode": "^1.19.0"
+    },
+    "categories": [
+        "Linters"
+    ],
+    "activationEvents": [
+        "onLanguage:sql"
+    ],
+    "main": "./extension",
+    "scripts": {
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "typescript": "^2.6.1",
+        "vscode": "^1.1.6",
+        "eslint": "^4.6.1",
+        "@types/node": "^7.0.43",
+        "@types/mocha": "^2.2.42"
+    }
+}
