@@ -2,10 +2,10 @@
     "name": "ut-code-sql",
     "displayName": "ut-code-sql",
     "description": "TSQL lint",
-    "version": "1.0.0",
+    "version": "1.0.2",
     "publisher": "undertree",
     "dependencies": {
-        "ut-tsql-lexer": "^1.0.0"
+        "ut-tsql-lexer": "^1.0.2"
     },
     "engines": {
         "vscode": "^1.19.0"
