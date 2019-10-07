@@ -2,7 +2,7 @@
     "name": "ut-code-sql",
     "displayName": "ut-code-sql",
     "description": "TSQL lint",
-    "version": "1.0.7",
+    "version": "1.0.8",
     "publisher": "undertree",
     "dependencies": {
         "ut-tsql-lexer": "^1.0.7"
