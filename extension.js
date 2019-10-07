@@ -26,7 +26,7 @@ function lint(document) {
             parsed.lint.forEach(function(item) {
                 let range = new vscode.Range(new vscode.Position(item.startLine - 1, item.startColumn - 1), new vscode.Position(item.endLine - 1, item.endColumn - 1));
                 const diagnostic = new vscode.Diagnostic(range, item.message, vscode.DiagnosticSeverity.Warning);
-                diagnostic.code = item.code;
+                diagnostic.code = 'file://' + item.code;
                 diagnostic.source = extensionDisplayName;
                 diagnostics.push(diagnostic);
             });
