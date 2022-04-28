@@ -19,7 +19,7 @@ function lint(document) {
 
     const diagnostics = [];
 
-    const parse = SQLLanguageId === 'sql' ? require('ut-tsql-lexer') : require('ut-plsql-lexer');
+    const parse = (document.languageId === 'sql') ? require('ut-tsql-lexer') : require('ut-plsql-lexer');
 
     try {
         var parsed = parse.parse(document.getText());
