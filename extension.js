@@ -1,6 +1,5 @@
 const vscode = require('vscode');
 const packageJson = require('./package.json');
-const parse = require('ut-tsql-lexer');
 const clickForInfo = 'Click for more information about ';
 const extensionDisplayName = packageJson.displayName;
 const throttleDuration = 500;
@@ -8,17 +7,19 @@ const throttle = {
     document: null,
     timeout: null
 };
-const SQLLanguageId = 'sql';
+const SQLLanguageId = ['sql', 'oraclesql'];
 
 let outputChannel = null;
 let diagnosticCollection = null;
 
 function lint(document) {
-    if (document.languageId !== SQLLanguageId) {
+    if (!SQLLanguageId.includes(document.languageId)) {
         return;
     }
 
     const diagnostics = [];
+
+    const parse = SQLLanguageId === 'sql' ? require('ut-tsql-lexer') : require('ut-plsql-lexer');
 
     try {
         var parsed = parse.parse(document.getText());

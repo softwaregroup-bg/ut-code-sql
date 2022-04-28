@@ -1,11 +1,12 @@
 {
     "name": "ut-code-sql",
     "displayName": "ut-code-sql",
-    "description": "TSQL lint",
-    "version": "1.0.9",
+    "description": "TSQL and PL/SQL lint",
+    "version": "1.1.0",
     "publisher": "undertree",
     "dependencies": {
-        "ut-tsql-lexer": "^1.5.3"
+        "ut-tsql-lexer": "^1.5.3",
+        "ut-plsql-lexer": "^1.7.0"
     },
     "engines": {
         "vscode": "^1.19.0"
@@ -14,7 +15,8 @@
         "Linters"
     ],
     "activationEvents": [
-        "onLanguage:sql"
+        "onLanguage:sql",
+        "onLanguage:oraclesql"
     ],
     "main": "./extension",
     "scripts": {
